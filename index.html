@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script>
+    function validateform()
+    {
+        var x= Document.forms ["myform"]["fname"].value;
+        
+    }
+
+</script>
+</head>
+<style>
+body{background-color: khaki;text-align: center;}
+h1{color: lightcoral;font-size: 40px;text-align: center;}
+.tab
+{background-color: whitesmoke;
+    font-style: oblique;
+    font-size: 15px;
+}
+h2 {text-align: center;}
+
+</style>
+
+<body>
+<h1>Survey Form</h1>
+<div class="tab">
+<h2>Let us know how we can improve freecode camp</h2>
+
+<div class="container">
+    <form class="form-horizontal" name="myform" onsubmit="return validateform()" method="POST">
+        <div class="row"> 
+            <div class="col-sm-6" style="text-align: right;"> 
+                <label>*Name : </label>
+            </div>
+            <div class="col-sm-6" style="text-align: left;">
+                <input type="text", id="name", placeholder="please enter your name">
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col-sm-6" style="text-align: right;"> 
+                <label>*Email-id : </label>
+            </div>
+            <div class="col-sm-6" style="text-align: left;">
+                <input type="email", id="email", placeholder="please enter your email id">
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col-sm-6" style="text-align: right;"> 
+                <label>*Age : </label>
+            </div>
+            <div class="col-sm-6" style="text-align: left;">
+                <input type="number", id="age", placeholder="please enter your age" , min="0">
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col-sm-6" style="text-align: right;">
+                <label >Which option best describes your current role</label>
+            </div>
+            <div class="col-sm-6" style="text-align: left;">
+                <select name="role">
+                    <option value="value1">student</option>
+                    <option value="value2">Developer</option>
+                    <option value="value3">Tutor</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col-sm-6" style="text-align: right;">
+                <label>How likely is that would recommend FCC to your friend ?</label>
+            </div>
+            <div class="col-sm-6" style="text-align: left;">
+                <input type="radio", id="recommendation"><label>Maybe</label><p></p>
+                <input type="radio", id="recommendation"><label>Definately</label><p></p>
+                <input type="radio", id="recommendation"><label>never</label>
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col-sm-6" style="text-align: right;">
+                <lable>what do you like the most in FCC? </lable>
+            </div>
+            <div class="col-sm-6" style="text-align: left;">
+                <select name="like">
+                    <option value="value1">Teachers</option>
+                    <option value="value2">Environment</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col-sm-6" style="text-align: right;">
+                <lable>Thaings that should be improved in future <br> (check all that apply)</lable>
+            </div>
+            <div class="col-sm-6" style="text-align: left;">
+                <input type="checkbox", id="improvement"><lable> Front-End development</lable><p></p>
+                <input type="checkbox", id="improvement"><lable> Back-End development</lable><p></p>
+                <input type="checkbox", id="improvement"><lable> Data Visualisation</lable>
+            </div>
+        </div>
+        <p></p>
+        
+        <div class="row">
+            <div class="col-sm-6" style="text-align: right;">
+                <label>Comment</label>
+            </div>
+            <div class="col-sm-6" style="text-align: left;">
+                <textarea rows="3" cols="30" id="comment" placeholder="please enter your remark if any"></textarea>
+            </div>
+        </div>
+        <div class="submit" style="text-align: center;">
+            <input type="submit">
+        </div>
+        <button type="button" class="btn btn default">reset</button>
+        <button type="button" class="btn btn-default">Primary</button>
+    </form>
+</div>
+</div>
+</body>
+</html>
